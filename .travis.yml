@@ -31,3 +31,5 @@ script:
   - if [[ "$xdebug" != "yes" ]]; then composer run static-analysis; fi
 after_script:
   - if [[ "$xdebug" = "yes" ]]; then cat infection.log; fi
+services:
+  - mysql
