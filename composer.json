@@ -45,7 +45,7 @@
     "require": {
         "php": "^7.4",
         "ext-PDO": "*",
-        "daft-framework/daft-relaxed-object-repository": "dev-master",
+        "daft-framework/daft-relaxed-object-repository": "^0.1.0",
         "paragonie/easydb": "^2.11"
     },
     "require-dev": {
