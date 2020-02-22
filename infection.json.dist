@@ -10,9 +10,25 @@
     },
     "mutators": {
         "@default": true,
+        "LogicalNot": {
+            "ignore": [
+                "DaftFramework\\RelaxedObjectRepository\\ObjectEasyDBRepository::UpdateObject"
+            ]
+        },
         "MethodCallRemoval": {
             "ignore": [
-                "DaftFramework\\RelaxedObjectRepository\\ObjectEasyDBRepository::PatchObjectData"
+                "DaftFramework\\RelaxedObjectRepository\\ObjectEasyDBRepository::PatchObjectData",
+                "DaftFramework\\RelaxedObjectRepository\\ObjectEasyDBRepository::UpdateObject"
+            ]
+        },
+        "UnwrapArrayKeys": {
+            "ignore": [
+                "DaftFramework\\RelaxedObjectRepository\\ObjectEasyDBRepository::UpdateObject"
+            ]
+        },
+        "UnwrapArrayFilter": {
+            "ignore": [
+                "DaftFramework\\RelaxedObjectRepository\\ObjectEasyDBRepository::UpdateObject"
             ]
         }
     }
