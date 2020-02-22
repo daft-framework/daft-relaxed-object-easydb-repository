@@ -1,0 +1,9 @@
+/vendor/
+/phpunit/
+/phpunit.cache
+/phpunit.clover
+/.php_cs.cache
+/infection.log
+/psalm/cache/
+/.phpunit.result.cache
+/coverage/
