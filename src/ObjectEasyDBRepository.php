@@ -40,6 +40,9 @@ abstract class ObjectEasyDBRepository extends AbstractObjectRepository implement
 		$this->table = $options['table'];
 	}
 
+	/**
+	 * @param T2 $id
+	 */
 	public function RemoveObject(array $id) : void
 	{
 		$this->connection->delete($this->table, $id);
