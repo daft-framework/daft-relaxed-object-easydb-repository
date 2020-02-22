@@ -129,4 +129,22 @@ abstract class ObjectEasyDBRepository extends AbstractObjectRepository implement
 			}
 		}
 	}
+
+	public function UpdateObject(object $object) : void
+	{
+		$id = $this->ObtainIdFromObject($object);
+		$id_keys = array_keys($id);
+		/** @var T3 */
+		$data = array_filter(
+			$this->ConvertObjectToSimpleArray($object),
+			static function (string $key) use ($id_keys) : bool {
+				return ! in_array($key, $id_keys, true);
+			},
+			ARRAY_FILTER_USE_KEY
+		);
+
+		$this->PatchObjectData($id, $data);
+
+		parent::UpdateObject($object);
+	}
 }
