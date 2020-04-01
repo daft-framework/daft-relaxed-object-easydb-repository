@@ -42,6 +42,12 @@
             "php-cs-fixer fix --verbose --diff-format=udiff --dry-run"
         ]
     },
+	"conflict": {
+		"vimeo/psalm": "<3.10.1"
+	},
+	"suggest": {
+		"vimeo/psalm": "for static analysis & templated typehinting"
+	},
     "require": {
         "php": "^7.4",
         "ext-PDO": "*",
@@ -54,9 +60,9 @@
         "php-coveralls/php-coveralls": "^2.2",
         "phpunit/phpunit": "^8.5",
         "povils/phpmnd": "^2.2",
-        "psalm/plugin-phpunit": "^0.9.0",
+        "psalm/plugin-phpunit": "^0.9.1",
         "sebastian/phpcpd": "^5.0",
         "signpostmarv/php-cs-fixer-config": "^0.17.1",
-        "vimeo/psalm": "^3.9"
+        "vimeo/psalm": "^3.10"
     }
 }
