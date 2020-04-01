@@ -101,7 +101,6 @@ class ThingEasyDBRepository extends ObjectEasyDBRepository
 	 */
 	public function AppendObjectFromArray(array $data) : object
 	{
-		/** @var T1 */
 		$object = $this->ConvertSimpleArrayToObject($data);
 
 		/** @var T1 */
@@ -139,14 +138,5 @@ class ThingEasyDBRepository extends ObjectEasyDBRepository
 		return [
 			'id' => $object->id,
 		];
-	}
-
-	/**
-	 * @param T2 $id
-	 * @param T3 $data
-	 */
-	public function PatchObjectData(array $id, array $data) : void
-	{
-		parent::PatchObjectData($id, $data);
 	}
 }

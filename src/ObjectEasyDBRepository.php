@@ -115,12 +115,14 @@ abstract class ObjectEasyDBRepository extends AbstractObjectRepository implement
 		return $cached;
 	}
 
-	/**
-	 * @param T2 $id
-	 * @param T3 $data
-	 */
 	public function PatchObjectData(array $id, array $data) : void
 	{
+		/** @var T2 */
+		$id = $id;
+
+		/** @var T3 */
+		$data = $data;
+
 		$this->ForgetObject($id);
 		$this->connection->update($this->table, $data, $id);
 
